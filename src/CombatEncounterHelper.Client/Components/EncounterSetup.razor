@@ -1,0 +1,19 @@
+﻿<h3>Setup</h3>
+
+... is under construction.
+
+<button class="btn btn-primary" @onclick="UseSetup">Use setup</button>
+
+@if (Setup != null)
+{
+    <CombatEncounterHelper.Client.Components.EncounterResults Setup="Setup" @rendermode="InteractiveAuto" />
+}
+
+@code {
+    public CombatEncounterSetup? Setup { get; set; } = null;
+
+    public void UseSetup()
+    {
+        Setup = ExampleEncounterSetup.SetExample();
+    }
+}

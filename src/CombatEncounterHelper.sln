@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatEncounterHelper", "CombatEncounterHelper\CombatEncounterHelper.csproj", "{B78EAB6B-4755-40E9-9208-6F95E2B1672D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CombatEncounterHelper", "CombatEncounterHelper\CombatEncounterHelper.csproj", "{B78EAB6B-4755-40E9-9208-6F95E2B1672D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatEncounterHelper.Client", "CombatEncounterHelper.Client\CombatEncounterHelper.Client.csproj", "{12CD9FFC-2FFF-4E19-B2DE-ACAA283DAC70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CombatEncounterHelper.Client", "CombatEncounterHelper.Client\CombatEncounterHelper.Client.csproj", "{12CD9FFC-2FFF-4E19-B2DE-ACAA283DAC70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CombatEncounterHelper.Shared", "CombatEncounterHelper.Shared\CombatEncounterHelper.Shared.csproj", "{5584AE08-6ED2-45CE-ADD2-C86CDD2F6F18}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CombatEncounterHelper.Example", "CombatEncounterHelper.Example\CombatEncounterHelper.Example.csproj", "{14A35920-2112-45F0-B682-33950C819258}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{12CD9FFC-2FFF-4E19-B2DE-ACAA283DAC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12CD9FFC-2FFF-4E19-B2DE-ACAA283DAC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12CD9FFC-2FFF-4E19-B2DE-ACAA283DAC70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5584AE08-6ED2-45CE-ADD2-C86CDD2F6F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5584AE08-6ED2-45CE-ADD2-C86CDD2F6F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5584AE08-6ED2-45CE-ADD2-C86CDD2F6F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5584AE08-6ED2-45CE-ADD2-C86CDD2F6F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14A35920-2112-45F0-B682-33950C819258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14A35920-2112-45F0-B682-33950C819258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14A35920-2112-45F0-B682-33950C819258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14A35920-2112-45F0-B682-33950C819258}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

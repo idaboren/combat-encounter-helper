@@ -1,0 +1,14 @@
+﻿.pie-chart {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.chart-explanation {
+}
+
+.colour-box {
+    height: 12px;
+    width: 12px;
+}

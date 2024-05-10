@@ -12,4 +12,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CombatEncounterHelper.Example\CombatEncounterHelper.Example.csproj" />
+    <ProjectReference Include="..\CombatEncounterHelper.Shared\CombatEncounterHelper.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

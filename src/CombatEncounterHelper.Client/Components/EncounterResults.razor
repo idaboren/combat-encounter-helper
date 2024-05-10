@@ -1,0 +1,107 @@
+﻿
+<div>
+    <button class="btn btn-primary" @onclick="() => Simulate(1)">Simulate</button>
+    <button class="btn btn-primary" @onclick="() => Simulate(100)">Simulate 100</button>
+</div>
+
+@* <h3>Latest encounter</h3>
+<p>
+    Winner team: @latestWinner
+</p>
+<p>
+    Number of rounds: @latestRounds
+</p>
+<p>
+    Characters alive: @latestAlive
+</p> *@
+
+@if (encounterCount > 0)
+{
+    <h3>Reults</h3>
+
+    <div>
+        <p>
+            Encounters simulated: @encounterCount
+        </p>
+        <p>
+            Player team win percentage: @playerTeamWinPercentage% (@encounter.Analyser.PlayerTeamWinCount out of @encounterCount)
+        </p>
+        <p>
+            Average number of rounds: @roundAverage
+        </p>
+        <p>
+            Average characters alive: @aliveAverage
+        </p>
+        <p>
+            Average damage dealt: @damageDealtAverage
+        </p>
+    </div>
+    
+    <div style="display:flex">
+
+            <figure class="pie-chart" style="background:conic-gradient(
+            rebeccapurple 0,
+            rebeccapurple calc(@playerTeamWinPercentage%),
+            yellowgreen calc(@playerTeamWinPercentage%),
+            yellowgreen calc(100%)" />
+
+        <div class="chart-explanation">
+            <ul style="list-style-type:none;">
+                <li style="display:flex">
+                    <figure class="colour-box" style="background-color: rebeccapurple" />
+                    <div style="align-content:center">Player team</div>
+                </li>
+                <li style="display:flex">
+                    <figure class="colour-box" style="background-color: yellowgreen" />
+                    <div style="align-content:center">Enemy team</div>
+                </li>
+            </ul>
+
+        </div>
+        
+    </div>
+}
+
+@code {
+    //     private string latestWinner = string.Empty;
+    //     private double latestRounds;
+    //     private double latestAlive;
+
+    [Parameter]
+    public CombatEncounterSetup Setup { get; set; }
+
+    private CombatEncounter encounter;
+    private int encounterCount;
+    private double playerTeamWinPercentage;
+    private double roundAverage;
+    private double aliveAverage;
+    private double damageDealtAverage;
+
+    public void Simulate(int simulationAmount)
+    {
+        // TODO: setup reset?
+
+        var simulationCount = 0;
+        while(simulationCount < simulationAmount)
+        {
+            encounter = new CombatEncounter(Setup);
+            encounter.Simulate();
+            simulationCount++;
+        }
+
+        // For testing purposes
+        // latestWinner = encounter.Analyser.LatestWinningTeam;
+        // latestRounds = encounter.Analyser.LatestRoundCount;
+        // latestAlive = encounter.Analyser.LatestAliveAtEndCount;
+
+        encounterCount = encounter.Analyser.EncounterCount;
+
+        if (encounterCount > 0)
+        {
+            roundAverage = encounter.Analyser.CalculateRoundCountAverage();
+            aliveAverage = encounter.Analyser.CalculateAliveAtEndAverage();
+            damageDealtAverage = encounter.Analyser.CalculateDamageDealtPerTurnAverage();
+            playerTeamWinPercentage = encounter.Analyser.CalculatePlayerTeamWinPercentage();
+        }
+    }
+}
