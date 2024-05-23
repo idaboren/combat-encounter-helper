@@ -19,12 +19,14 @@ public static class ExampleEncounterSetup
                 new Character("playerOne", true, 10, new HitPoints(11, 11), 1, new IAction[]
                     {
                         new Attack("Sword Attack", new Damage(
-                            new Die(4), 2, 2), 2)
+                            new Die(4), 2, 2), 
+                            2)
                     }),
                 new Character("playerTwo", true, 10, new HitPoints(11, 11), 1, new IAction[]
                 {
                     new Attack("Sword Attack", new Damage(
-                        new Die(4), 2, 2), 2)
+                        new Die(4), 2, 2), 
+                        2)
                 })
             },
             EnemyTeam = new ICreature[]

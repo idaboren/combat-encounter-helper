@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace CombatEncounterHelper.Shared.Models;
 
-public class Turn : ICycle
+public class CombatTurn : ICycle
 {
     private ICreature turnTaker;
     private CombatEncounter encounter;
 
-    public Turn(ICreature turnTaker, CombatEncounter encounter)
+    public CombatTurn(ICreature turnTaker, CombatEncounter encounter)
     {
         this.turnTaker = turnTaker;
         this.encounter = encounter;

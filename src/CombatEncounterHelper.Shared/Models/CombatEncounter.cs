@@ -42,7 +42,7 @@ public class CombatEncounter : ICycle
         while (playerTeam.Where(c => c.IsAlive).Count() > 0 
             && enemyTeam.Where(c => c.IsAlive).Count() > 0)
         {
-            var round = new Round(this);
+            var round = new CombatRound(this);
             round.Simulate();
         }
 

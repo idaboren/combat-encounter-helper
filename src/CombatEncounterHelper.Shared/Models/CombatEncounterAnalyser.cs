@@ -20,12 +20,7 @@ public class CombatEncounterAnalyser
 
     public double CalculatePlayerTeamWinPercentage()
     {
-        if (PlayerTeamWinCount > 0)
-        {
-            return Math.Round(((double)PlayerTeamWinCount / EncounterCount) * 100, 2);
-        }
-        else
-            return 0;
+        return Math.Round(((double)PlayerTeamWinCount / EncounterCount) * 100, 2);
     }
 
     public double CalculateRoundCountAverage()

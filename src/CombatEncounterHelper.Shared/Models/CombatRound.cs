@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace CombatEncounterHelper.Shared.Models;
 
-public class Round : ICycle
+public class CombatRound : ICycle
 {
     private CombatEncounter encounter;
 
-    public Round(CombatEncounter encounter)
+    public CombatRound(CombatEncounter encounter)
     {
         this.encounter = encounter;
     }
@@ -22,7 +22,7 @@ public class Round : ICycle
 
         foreach (var creature in encounter.InitiativeOrder.Keys)
         {
-            new Turn(creature, encounter).Simulate();
+            new CombatTurn(creature, encounter).Simulate();
         }
 
         encounter.Analyser.RoundCountPerEncounter.Add(encounter.Analyser.LatestRoundCount);
